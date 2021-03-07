@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2290297_fzkalv0i9cq.css">
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: url('img/image/login-bg.jpg') no-repeat center;
+    position: relative;
+}
+.main::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+.content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 350px;
+    height: 400px;
+}
+.title{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title img{
+    width: 60px;
+    height: 60px;
+}
+form>label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 10px;
+}
+form>label:first-child{
+    border-bottom: 1px solid#ccc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+form>label:nth-child(2){    
+    border-bottom: 1px solid#ccc;
+}
+form>label:nth-child(3){
+    border-bottom: 1px solid#ccc;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 20px;
+}
+form>label i {
+    font-size: 20px !important;
+}
+form input{
+    flex: 1;
+    outline: none;
+    box-shadow: none;
+    height: 30px;
+    border:none;
+    padding: 5px 10px;
+}
+.login-box{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    border: 0;
+    outline: none;
+    padding: 10px 35px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+</style>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="title">
+                <img src="img/yjtp.png" alt="">
+            </div>
+            <form>
+                <label>
+                    <i class="iconfont icon-phone"></i>
+                    <input type="text" placeholder="手机号">
+                </label>
+                <label>
+                    <i class="iconfont icon-user"></i>
+                    <input type="text" placeholder="用户名">
+                </label>
+                <label>
+                    <i class="iconfont icon-lock"></i>
+                    <input type="password" placeholder="密码">
+                </label>
+                <div class="login-box">
+                    <button>注册 <i class="iconfont icon-changjiantou"></i></button>
+                    <button>登录</button>
+                    <button>去登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let btn = document.querySelectorAll('button');
+    let label = document.getElementsByTagName('label');
+    console.log(label)
+    btn[1].onclick = function (e){
+        e.preventDefault();
+        window.location.href = 'index.html';
+    }
+    btn[0].onclick = function (e){
+        e.preventDefault();
+        label[0].style.display = 'flex';
+        btn[2].style.display = 'block';
+        btn[1].style.display = 'none';
+    }
+    btn[2].onclick = function (e){
+        e.preventDefault();
+        label[0].style.display = 'none';
+        this.style.display = 'none';
+        btn[1].style.display = 'block';
+    }
+    let isRegister = window.location.search ? window.location.search.slice(-1) - 0 : 0 ;
+    if (isRegister) {
+        label[0].style.display = 'flex';
+        btn[1].style.display = 'none';
+        btn[2].style.display = 'block';
+    } else {
+        label[0].style.display = 'none';
+        btn[1].style.display = 'block';
+        btn[2].style.display = 'none';
+    }
+</script>
