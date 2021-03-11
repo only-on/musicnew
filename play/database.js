@@ -65,7 +65,7 @@ var database = [
         photo: "images/cyx.jpg",
         lyrics: [{time: "00:01", lyric: "逝去的爱情"},
             {time: "00:04", lyric: "梁芝芝"},
-            {time: "00:06", lyric: "《认了吧》"},
+           
             {time: "00:11", lyric: "你等待着我的消息"},
             {time: "00:16", lyric: "我想说却又不忍心"},
             {time: "00:18", lyric: "其实我早已有了心仪"},
@@ -100,7 +100,7 @@ var database = [
         alltime: "03:53",
         photo: "images/yzw.jpg",
         lyrics: [{time: "00:01", lyric: "誓言"},
-            {time: "00:02", lyric: "作词：黄婷 作曲：木村充利"},
+           
             {time: "00:04", lyric: "演唱：梁芝芝"},
             {time: "00:07", lyric: "誓言有什么用"},
             {time: "00:25", lyric: "说再多都听不够"},
@@ -120,8 +120,8 @@ var database = [
     },
     {
         id: "5", songs: "守护孤独", name: "梁芝芝", src: "music/守护孤独.mp3", alltime: "04.06", photo: "images/zxy.jpg", lyrics: [
-        {time: "00:01", lyric: "守护孤独"},
-        {time: "00:01", lyric: "作词 :姚若龙　作曲 :戚小恋"},
+        
+    
         {time: "00:02", lyric: "演唱：梁芝芝"},
         {time: "00:03", lyric: ""},
         {time: "00:23", lyric: "每一分秒钟 期待着的梦"},
